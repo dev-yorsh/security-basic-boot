@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  error:
+    include-stacktrace: always
+    include-message: always
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://training-2023.c28iuxvvoumq.us-east-1.rds.amazonaws.com:5432/training_security
+    username: postgres
+    password: S6ao9cp9c
+  jpa:
+    properties:
+      hibernate: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: email.pruebas.07@gmail.com
+    password: gavyvztzfjhyugmh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+logging:
+  level:
+    org:
+      springframework:
+        security: debug
